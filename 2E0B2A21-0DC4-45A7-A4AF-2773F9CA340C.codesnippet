@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Controller - TabBarController Programmatically</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class TabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let weatherviewController = WeatherViewController()
+        let favoriteViewController = FavoriteViewController()
+        
+        let navigationController = UINavigationController(rootViewController: weatherviewController)
+        
+        weatherviewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        favoriteViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        
+        let viewControllerList = [navigationController, favoriteViewController]
+        viewControllers = viewControllerList
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E0B2A21-0DC4-45A7-A4AF-2773F9CA340C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TabBarController Programmatically</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

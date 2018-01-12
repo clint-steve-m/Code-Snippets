@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>GenericApiClient</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct GoogleAPIClient {
+    private init() {}
+    static let manager = GoogleAPIClient()
+    
+    private let apiKey = "AIzaSyC80XyOEq1teuskfejuRmfZmuw3ehKSeI4"
+    func getBookDetails(for isbn: String, completion: @escaping ([Volume]?) -&gt; Void,
+                        errorHandler: @escaping (Error) -&gt; Void) {
+        print(isbn)
+        let bookDetailsURL = "https://www.googleapis.com/books/v1/volumes?q=+isbn:\(isbn)&amp;key=\(apiKey)"
+        
+        print(bookDetailsURL)
+        guard let url = URL(string: bookDetailsURL) else { errorHandler(AppError.badURL(str: bookDetailsURL)); return }
+        let request = URLRequest(url: url)
+        let completion: (Data) -&gt; Void = { ( data: Data) in
+            do {
+                let json = try JSONDecoder().decode(BookPreview.self, from: data)
+                guard let myJson = json.items else { print("nil"); completion(nil); return }
+                completion(myJson)
+            } catch {
+                errorHandler(AppError.codingError(rawError: error))
+            }
+        }
+        NetworkHelper.manager.performDataTask(with: request, completionHandler: completion, errorHandler: errorHandler)
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DB8EAD78-2268-4ACE-A829-AE68CF228FDD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>GenericAPIClient</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

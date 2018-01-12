@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>coding key</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct BookCategory: Codable {
+    let results: [CategoryResults]
+}
+
+struct CategoryResults: Codable {
+    var listNameEncoded: String
+    var displayName: String
+    
+    enum CodingKeys: String, CodingKey {
+        case listNameEncoded = "list_name_encoded"
+        case displayName = "display_name"
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>75716854-C60C-4BF4-A069-81FC00DFF588</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Coding Key - example</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lazy image constraints</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private func setupRandomImage() {
+        let safeArea = view.safeAreaLayoutGuide
+        randomImage.translatesAutoresizingMaskIntoConstraints = false
+        randomImage.topAnchor.constraint(equalTo: cityLabel.bottomAnchor, constant: 20).isActive = true
+        randomImage.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 0).isActive = true
+        randomImage.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: 0).isActive = true
+        randomImage.heightAnchor.constraint(equalTo: safeArea.heightAnchor, multiplier: 0.5).isActive = true
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6B2508BE-5EF9-4A2B-BDAD-10D8B46B575A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lazy image constraints</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

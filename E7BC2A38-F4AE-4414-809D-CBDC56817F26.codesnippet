@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>setup CoreAnimation</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let animation = CABasicAnimation(keyPath: "borderWidth")
+        animation.fromValue = 1.0
+        animation.toValue = 10
+        animation.duration = 0.5
+        imageView.layer.add(animation, forKey: nil) //forkey is an internal case
+        imageView.layer.borderWidth = 10.0
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E7BC2A38-F4AE-4414-809D-CBDC56817F26</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Setup CoreAnimation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
