@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>Controller - TabBarController Programmatically</string>
+	<string>CM TabBarController Programmatically</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>class TabBarController: UITabBarController {
@@ -14,22 +14,24 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let weatherviewController = WeatherViewController()
-        let favoriteViewController = FavoriteViewController()
+        let &lt;#View Controller Name#&gt; = &lt;#View Controller Name#&gt;()
+        let &lt;#View Controller Name#&gt; = &lt;#View Controller Name#&gt;()
         
-        let navigationController = UINavigationController(rootViewController: weatherviewController)
+        let navigationController = UINavigationController(rootViewController: &lt;#View Controller Name#&gt;)
         
-        weatherviewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        favoriteViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        &lt;#View Controller Name#&gt;.tabBarItem = UITabBarItem(tabBarSystemItem: &lt;#icon#&gt;, tag: 0)
+        &lt;#View Controller Name#&gt;.tabBarItem = UITabBarItem(tabBarSystemItem: &lt;#icon#&gt;, tag: 1)
         
-        let viewControllerList = [navigationController, favoriteViewController]
+        let viewControllerList = [&lt;#View Controller Name#&gt;, &lt;#View Controller Name#&gt;]
         viewControllers = viewControllerList
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2E0B2A21-0DC4-45A7-A4AF-2773F9CA340C</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>TabBarController Programmatically</string>
 	<key>IDECodeSnippetUserSnippet</key>

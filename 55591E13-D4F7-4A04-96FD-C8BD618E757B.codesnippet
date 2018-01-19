@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>UserDefaultsHelper</string>
+	<string>CM UserDefaultsHelper</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>struct UserDefaultsHelper {
     private init() { }
     static let manager = UserDefaultsHelper()
-    private var keyName = "String"
+    private var keyName = "&lt;#String#&gt;"
     
     func get() -&gt; String? {
         return UserDefaults.standard.string(forKey: keyName)
@@ -25,7 +25,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>55591E13-D4F7-4A04-96FD-C8BD618E757B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>UserDefaultsHelper</string>
 	<key>IDECodeSnippetUserSnippet</key>

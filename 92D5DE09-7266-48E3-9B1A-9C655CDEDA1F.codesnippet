@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>lazy label</string>
+	<string>CM lazy label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -11,15 +11,17 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var Label: UILabel = {
         let label = UILabel()
-        label.text = "Text"
-        label.textAlignment = .center
+        label.text = "&lt;#Text#&gt;"
+        label.textAlignment = .&lt;##&gt;
         label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         return label
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>92D5DE09-7266-48E3-9B1A-9C655CDEDA1F</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>lazy label</string>
 	<key>IDECodeSnippetUserSnippet</key>
