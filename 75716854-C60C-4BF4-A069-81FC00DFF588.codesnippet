@@ -3,31 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>coding key</string>
+	<string>CM Coding key: Codable</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>struct BookCategory: Codable {
-    let results: [CategoryResults]
+	<string>struct &lt;#Type Name#&gt;: Codable {
+    let &lt;#constant's name#&gt;: [&lt;#Type Name#&gt;]
 }
 
-struct CategoryResults: Codable {
-    var listNameEncoded: String
-    var displayName: String
+struct &lt;#Type Name#&gt;: Codable {
+    var &lt;#var name#&gt;: &lt;#Type#&gt;
+    var &lt;#var name#&gt;: &lt;#Type#&gt;
     
-    enum CodingKeys: String, CodingKey {
-        case listNameEncoded = "list_name_encoded"
-        case displayName = "display_name"
+    enum CodingKeys: &lt;#Type#&gt;, CodingKey {
+        case &lt;#Case Name#&gt; = "&lt;#String#&gt;"
+        case &lt;#Case Name#&gt; = "&lt;#String#&gt;"
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>75716854-C60C-4BF4-A069-81FC00DFF588</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Coding Key - example</string>
+	<string>Coding Key: Codable</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

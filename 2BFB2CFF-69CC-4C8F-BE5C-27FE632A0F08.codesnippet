@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>NetworkHelper</string>
+	<string>CM NetworkHelper</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -44,7 +44,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2BFB2CFF-69CC-4C8F-BE5C-27FE632A0F08</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>NetWorkHelper</string>
 	<key>IDECodeSnippetUserSnippet</key>

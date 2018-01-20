@@ -3,29 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>GenericApiClient</string>
+	<string>CM GenericApiClient</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>struct GoogleAPIClient {
+	<string>struct &lt;#Name#&gt; {
     private init() {}
-    static let manager = GoogleAPIClient()
+    static let manager = &lt;#Name#&gt;()
     
-    private let apiKey = "AIzaSyC80XyOEq1teuskfejuRmfZmuw3ehKSeI4"
-    func getBookDetails(for isbn: String, completion: @escaping ([Volume]?) -&gt; Void,
+    private let apiKey = "&lt;#key#&gt;"
+    func &lt;#func name#&gt;(for &lt;#internalParam#&gt;: &lt;#Type#&gt;, completion: @escaping ([&lt;#Type#&gt;]?) -&gt; Void,
                         errorHandler: @escaping (Error) -&gt; Void) {
-        print(isbn)
-        let bookDetailsURL = "https://www.googleapis.com/books/v1/volumes?q=+isbn:\(isbn)&amp;key=\(apiKey)"
-        
-        print(bookDetailsURL)
-        guard let url = URL(string: bookDetailsURL) else { errorHandler(AppError.badURL(str: bookDetailsURL)); return }
+        let endPoint = "&lt;#endPoint#&gt;"
+        guard let url = URL(string: endPoint) else { errorHandler(AppError.badURL(str: endPoint)); return }
         let request = URLRequest(url: url)
         let completion: (Data) -&gt; Void = { ( data: Data) in
             do {
-                let json = try JSONDecoder().decode(BookPreview.self, from: data)
-                guard let myJson = json.items else { print("nil"); completion(nil); return }
+                let json = try JSONDecoder().decode(&lt;#Type#&gt;.self, from: data)
+                guard let myJson = json.&lt;#property#&gt; else { print("nil"); completion(nil); return }
                 completion(myJson)
             } catch {
                 errorHandler(AppError.codingError(rawError: error))
@@ -37,7 +34,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DB8EAD78-2268-4ACE-A829-AE68CF228FDD</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>GenericAPIClient</string>
 	<key>IDECodeSnippetUserSnippet</key>

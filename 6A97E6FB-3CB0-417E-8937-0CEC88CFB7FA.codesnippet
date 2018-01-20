@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>imageAPIClient - sole</string>
+	<string>CM imageAPIClient - sole</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>class ImageAPIClient {
@@ -28,7 +28,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>6A97E6FB-3CB0-417E-8937-0CEC88CFB7FA</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>imageAPIClient</string>
 	<key>IDECodeSnippetUserSnippet</key>

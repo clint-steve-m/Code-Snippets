@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>custom view</string>
+	<string>CM custom view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>class CustomView: UIView {
@@ -36,7 +36,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>7D2998C8-5E24-4728-9A90-5C2395C056F8</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>custom view</string>
 	<key>IDECodeSnippetUserSnippet</key>

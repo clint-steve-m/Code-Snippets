@@ -3,30 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM setup Appdelegate</string>
+	<string>CM NS Cache Helper</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let viewController = &lt;#Controller's Name#&gt;()
+	<string>import UIKit
 
-let tabBarController = &lt;#Controller's Name#&gt;()
-
-
-window = UIWindow(frame: UIScreen.main.bounds)
-window?.rootViewController = &lt;#Controller's Name#&gt;
-window?.makeKeyAndVisible()
-
-return true</string>
+class NSCacheHelper {
+    private init() {}
+    static let manager = NSCacheHelper()
+    private var myCache = NSCache&lt;NSString, UIImage&gt;()
+    func addImage(with urlStr: String, and image: UIImage) {
+        myCache.setObject(image, forKey: urlStr as NSString)
+    }
+    func getImage(with urlStr: String) -&gt; UIImage? {
+        return myCache.object(forKey: urlStr as NSString)
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4CFF76E3-CEAA-4439-BD42-36977309247B</string>
+	<string>3F7809CC-CCC5-4008-8F61-86C5437AAFE1</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>AppDelegate - programmatic VC setup</string>
+	<string>NS Cache Helper</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

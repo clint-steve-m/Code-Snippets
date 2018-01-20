@@ -2,9 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>CM Error enums</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>TopLevel</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>enum AppError: Error {
@@ -19,7 +21,9 @@
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F3921DE9-3748-43E1-B081-ED525656E597</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
 	<string>Error enums</string>
 	<key>IDECodeSnippetUserSnippet</key>
