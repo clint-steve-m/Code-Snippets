@@ -3,24 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM Mark section</string>
+	<string>CM NavBar SearchBar</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: - &lt;#Section#&gt;</string>
+	<string> configureNavBar()
+        
+
+
+    
+    private func configureNavBar() {
+        navigationItem.title = "&lt;#Title#&gt;"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.largeTitleDisplayMode = .never
+        navigationItem.titleView = &lt;#placeView.venueSearchBar#&gt;</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>06DDF028-A471-42FE-8800-077D1EC5806F</string>
+	<string>B287EB0E-D1B6-4977-90AF-987D07DBD7F6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>MARK Comment</string>
+	<string>NavBar searchBar</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
