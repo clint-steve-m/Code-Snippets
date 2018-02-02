@@ -3,27 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM lazy image</string>
+	<string>CM lazy tableview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#imageView#&gt;: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image =  #imageLiteral(resourceName: "&lt;#asset#&gt;")
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
+	<string>lazy var &lt;#tableView#&gt;: UITableView = {
+        let tableView = UITableView()
+        tableView.register(&lt;#VC name#&gt;.self, forCellReuseIdentifier: cellId)
+        return tableView
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4C0BD890-2EAB-4F74-B1D6-B6A65DFD0DC1</string>
+	<string>1E7195EF-ED47-44BD-83B6-84B67F5F91F9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy Image</string>
+	<string>lazy tableView</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

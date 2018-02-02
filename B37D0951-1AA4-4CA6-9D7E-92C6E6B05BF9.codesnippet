@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM lazy image</string>
+	<string>CM snapkit constraints</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#imageView#&gt;: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image =  #imageLiteral(resourceName: "&lt;#asset#&gt;")
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
-    }()</string>
+	<string>private func setup&lt;#outletName#&gt;() {
+        outletName.snp.makeConstraints { (make) in
+            make.top.equalTo(userNameButton.snp.top).offset(5)
+            make.trailing.equalTo(snp.trailing).offset(-20)
+            make.width.height.qualTo(self).multipliedBy(0.3)
+        }
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4C0BD890-2EAB-4F74-B1D6-B6A65DFD0DC1</string>
+	<string>B37D0951-1AA4-4CA6-9D7E-92C6E6B05BF9</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy Image</string>
+	<string>snapkit constraints</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

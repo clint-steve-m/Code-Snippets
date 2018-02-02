@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM lazy image</string>
+	<string>CM lazy textfield</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#imageView#&gt;: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image =  #imageLiteral(resourceName: "&lt;#asset#&gt;")
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
+	<string>lazy var &lt;#textField#&gt;: UITextField = {
+        let textfield = UITextField()
+        textfield.placeholder = "&lt;#Text#&gt;"
+        textfield.borderStyle = .line
+        textfield.textAlignment = .center
+        return textfield
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4C0BD890-2EAB-4F74-B1D6-B6A65DFD0DC1</string>
+	<string>62629261-27D3-456E-8467-852935CE4039</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy Image</string>
+	<string>lazy textField</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

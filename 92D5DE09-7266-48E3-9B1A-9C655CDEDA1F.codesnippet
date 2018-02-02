@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var Label: UILabel = {
+	<string>lazy var &lt;#label#&gt;: UILabel = {
         let label = UILabel()
         label.text = "&lt;#Text#&gt;"
         label.textAlignment = .&lt;##&gt;

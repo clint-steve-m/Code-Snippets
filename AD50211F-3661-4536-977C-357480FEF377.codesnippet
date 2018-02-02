@@ -3,27 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM lazy image</string>
+	<string>CM lazy button with text</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>All</string>
+		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var &lt;#imageView#&gt;: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image =  #imageLiteral(resourceName: "&lt;#asset#&gt;")
-        imageView.contentMode = .scaleAspectFit
-        imageView.clipsToBounds = true
-        return imageView
+	<string>lazy var &lt;#button#&gt;: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .black
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor.blue, for: .selected)
+        button.titleLabel?.text = "&lt;#text#&gt;"
+        button.titleLabel?.textAlignment = .center
+        return button
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>4C0BD890-2EAB-4F74-B1D6-B6A65DFD0DC1</string>
+	<string>AD50211F-3661-4536-977C-357480FEF377</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetPlatformFamily</key>
 	<string>iphoneos</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy Image</string>
+	<string>lazy Button w/ text</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
