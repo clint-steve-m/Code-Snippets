@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>CM Custom Protocol</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>protocol delegateName: class {
+func funcName(_ param: Type)
+}
+
+// add to boss
+weak var delegate = delegateName?
+
+//set the call
+self.delegate?.funcName()
+
+// set extension
+extension &lt;#ViewControllerName#&gt;: delegateName {
+func funcName() {
+}
+}
+
+// set delegate
+delegateName.delegate = self
+
+// set method of the contract
+func funcName(_ param: Type) {
+&lt;#code block#&gt;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>22CCCC13-5218-41BB-9FD6-5CAA5F49DFA8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>protocol with conformity</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Custom Protocol</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
