@@ -3,28 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>CM - Reload w/ Dispatch</string>
+	<string>CM Double Extension: Clean Value %</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var decks = [Deck]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.categoryView.deckTableView.reloadData()
-            }
-        }
-    }</string>
+	<string>extension Double {
+    var cleanValue: String {
+        return self.truncatingRemainder(dividingBy: 1) == 0 ? String(format: "%.0f", self) : String(self)
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>8E042463-5E9A-46B8-B877-A5B2654B5614</string>
+	<string>19877ACA-5DAC-481A-87D3-C1DB8F523931</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Provides a percentage minus .tenth place</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>ReloadData w/ Dispatch</string>
+	<string>Double Extenstion: Clean Value %</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
