@@ -67,7 +67,7 @@ UIView_programmatic_implementation                    Sample code for programmat
 
 ## How to create your own snippets
 
-* Write your code snippet down at the code editor and select it.
+* Write your code snippet down in the code editor and select it.
 * Be sure to open the code snippet library view within Xcode.
 * Simply drag the selected code to the code snippet library.
 * Enter a title and a short description of your snippet.
