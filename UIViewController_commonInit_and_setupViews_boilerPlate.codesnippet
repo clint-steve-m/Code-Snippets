@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet -  ViewController: commonInit &amp; setupViews boilerPlate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//MARK: - Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    // required. Storyboard
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    //MARK: - Functions
+    private func commonInit() {
+        backgroundColor = .red
+        setupViews()
+    }
+
+    private func setupViews() {
+        &lt;#nameOfSetupFunction#&gt;()
+        &lt;#nameOfSetupFunction#&gt;()
+    }
+    </string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C10179DF-9721-4C6A-90C9-74D6BDE9750B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>commonInit &amp; setupViews boilerPlate for programmatic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ViewController: commonInit &amp; setupViews boilerPlate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

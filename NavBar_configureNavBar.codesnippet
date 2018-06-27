@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - NavBar (configureNavBar)</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private func configureNavBar() {
+        navigationItem.title = "&lt;#Jobs#&gt;"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "&lt;#sign out#&gt;", style: .plain, target: self, action: #selector(&lt;#signOut#&gt;))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(&lt;#addJob#&gt;))
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C7C9FEC5-D1CC-45F1-AC37-C3216DB3B9D9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>BoilerPlate for configuring Navbar programmatically</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NavBar: configure (configureNavBar)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

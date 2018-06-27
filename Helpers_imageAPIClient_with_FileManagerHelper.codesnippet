@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - imageAPIClient with FileManagerHelper</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class ImageAPIClient {
+    private init() {}
+    static let manager = ImageAPIClient()
+    func loadImage(from urlStr: String,
+    completionHandler: @escaping (UIImage) -&gt; Void,
+    errorHandler: @escaping (Error) -&gt; Void) {
+        guard let url = URL(string: urlStr) else {errorHandler(AppError.badURL(str: urlStr)); return}
+        if let savedImage = FileManagerHelper.manager.getImage(with: urlStr) {
+            completionHandler(savedImage)
+            return
+        }
+        let completion = {(data: Data) in
+            guard let onlineImage = UIImage(data: data) else {errorHandler(AppError.invalidImage); return}
+            FileManagerHelper.manager.saveImage(with: urlStr, image: onlineImage)
+            completionHandler(onlineImage)
+        }
+        NetworkHelper.manager.performDataTask(with: URLRequest(url: url),
+        completionHandler: completion,
+        errorHandler: errorHandler)
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C70E324E-B87A-4FE8-A0DF-ACD2D9877F7D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>imageAPIClient with FileManagerHelper for storing Images</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Helpers: imageAPIClient with FileManagerHelper</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet: Double (round to specified fraction digits)</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension Double {
+    func roundToDecimal(_ fractionDigits: Int) -&gt; Double {
+        let multiplier = pow(10, Double(fractionDigits))
+        return Darwin.round(self * multiplier) / multiplier
+    }
+}
+
+let roundedValue1 = 0.6844.roundToDecimal(3)
+let roundedValue2 = 0.6849.roundToDecimal(3)
+print(roundedValue1) // returns 0.684
+print(roundedValue2) // returns 0.685
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8268DECE-77BE-4C50-BAE6-4682D2854762</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>extenstion for rounding to specified fraction digits</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Double:  round to specified fraction digits Extension</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

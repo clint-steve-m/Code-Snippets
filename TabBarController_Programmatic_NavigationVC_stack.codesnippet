@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - TabBarController: Programmatic NavigationVC stack</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class TabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let &lt;#View Controller Name#&gt; = &lt;#View Controller Name#&gt;()
+        let &lt;#View Controller Name#&gt; = &lt;#View Controller Name#&gt;()
+        
+        let navigationController = UINavigationController(rootViewController: &lt;#View Controller Name#&gt;)
+        
+        &lt;#View Controller Name#&gt;.tabBarItem = UITabBarItem(tabBarSystemItem: &lt;#icon#&gt;, tag: 0)
+        &lt;#View Controller Name#&gt;.tabBarItem = UITabBarItem(tabBarSystemItem: &lt;#icon#&gt;, tag: 1)
+        
+        let viewControllerList = [&lt;#View Controller Name#&gt;, &lt;#View Controller Name#&gt;]
+        viewControllers = viewControllerList
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E0B2A21-0DC4-45A7-A4AF-2773F9CA340C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Programmatic TabBarController implementation</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TabBarController: Programmatic NavigationVC stack</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

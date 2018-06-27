@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - JSON struct codable example</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct Weather: Codable {
+    let response: [Forecast]
+}
+
+struct Forecast: Codable {
+    let periods: [Details]
+}
+
+struct Details: Codable {
+    let dateTimeIso: String
+    let maxTempF: Int
+    let minTempF: Int
+    let feelslikeF: Int
+    let precipIN: Int
+    let windSpeedMPH: Int
+    let windDir: String
+    let weather: String
+    let icon: String
+    let sunriseISO: String
+    let sunsetISO: String
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0B3A2A67-6E44-4CC1-950D-C9C6860723F4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>JSON struct codable example</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>JSON: codable example</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

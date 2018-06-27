@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Swift - KeyboardHandling: Move UIView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    let center: NotificationCenter = NotificationCenter.default
+    center.addObserver(self, selector: #selector(&lt;#ViewControllerName#&gt;.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    center.addObserver(self, selector: #selector(&lt;#ViewController Name#&gt;.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+}
+
+
+
+func keyboardWillShow(notification: NSNotification) {
+    let info:NSDictionary = notification.userInfo! as NSDictionary
+    let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+    
+    let keyboardHeight: CGFloat = keyboardSize.height
+    
+    let _: CGFloat = info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber as! CGFloat
+    
+    
+    UIView.animate(withDuration: 0.25, delay: 0.25, options: .curveEaseInOut, animations: {
+        self.view.frame = CGRect(x: 0, y: (self.view.frame.origin.y - keyboardHeight), width: self.view.bounds.width, height: self.view.bounds.height)
+    }, completion: nil)
+    
+}
+
+
+
+
+func keyboardWillHide(notification: NSNotification) {
+    let info: NSDictionary = notification.userInfo! as NSDictionary
+    let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+    
+    let keyboardHeight: CGFloat = keyboardSize.height
+    
+    let _: CGFloat = info[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber as! CGFloat
+    
+    UIView.animate(withDuration: 0.25, delay: 0.25, options: .curveEaseInOut, animations: {
+        
+        self.view.frame = CGRect(x: 0, y: (self.view.frame.origin.y + keyboardHeight), width: self.view.bounds.width, height: self.view.bounds.height)
+    }, completion: nil)
+    
+}
+
+
+override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7E5058DB-E44C-42DC-8D52-C827605A1F51</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Move UIView when keyBoardWillShow</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Keyboard Handling: UIView animate up</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - UIPickerView: programmatic setup</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // MARK: - variables
+    var categories = [CategoryResults]() {
+        didSet {
+            categoryPicker.reloadAllComponents()
+        }
+    }
+    
+    var categorySelected = ""
+    
+    // MARK: - viewDidLoad overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        categoryPicker.dataSource = self
+        categoryPicker.delegate = self
+        
+        //avoided using API call by loading stored categories
+        categories = PickerCategories.loadCategories()
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        UserDefaultsHelper.manager.setDefaultBookCategory(to: self.categorySelected)
+    }
+}
+
+// MARK: - PickerView
+extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    // numberOfComponents
+    func numberOfComponents(in pickerView: UIPickerView) -&gt; Int {
+        return 1
+    }
+    
+    // numberOfRowsInComponent
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -&gt; Int {
+        return categories.count // number of dict in Array
+    }
+    
+    // titleForRow
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -&gt; String? {
+        return categories[row].displayName
+    }
+    
+    // didSelectRow
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        categorySelected = categories[row].displayName
+    }
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C676D0C5-0489-436E-A2BA-398FFE465D88</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>programmatic setup of a UIPickerView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIPickerView: programmatic setup</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - Lazy var: CollectionView (Vertical)</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lazy var userFavoritesCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        let collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
+        let screenHeight: CGFloat = UIScreen.main.bounds.height
+        let screenWidth: CGFloat = UIScreen.main.bounds.width
+        let cellSpacing: CGFloat = 15.0
+        let numberOfCells: CGFloat = 2
+        let numberOfSpaces: CGFloat = numberOfCells + 1
+        layout.itemSize = CGSize(width: (screenWidth - (cellSpacing * numberOfSpaces)) / numberOfCells, height: screenHeight * 0.25)
+        layout.sectionInset = UIEdgeInsetsMake(cellSpacing, cellSpacing , cellSpacing, cellSpacing )
+        layout.minimumLineSpacing = cellSpacing
+        layout.minimumInteritemSpacing = cellSpacing
+        collectionView.backgroundColor = .white
+        collectionView.register(UserFavoritesCustomCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        return collectionView
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F3947A51-D470-4FAE-8772-D7DCCD67A2D3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>programmatic implementation of a vertical collectionView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Lazy vars: CollectionView (Vertical)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

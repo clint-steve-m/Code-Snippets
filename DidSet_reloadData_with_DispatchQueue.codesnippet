@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - DidSet: reloadData() w/ DispatchQueue for Array</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>var decks = [Deck]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.categoryView.deckTableView.reloadData()
+            }
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8E042463-5E9A-46B8-B877-A5B2654B5614</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>reloadData() w/ DispatchQueue for Array</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>DidSet: reloadData() w/ DispatchQueue for Array</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

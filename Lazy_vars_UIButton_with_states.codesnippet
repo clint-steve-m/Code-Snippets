@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - lazy var UIButton with states</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lazy var &lt;#button#&gt;: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .black
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.setTitleColor(UIColor.blue, for: .selected)
+        button.titleLabel?.text = "&lt;#text#&gt;"
+        button.titleLabel?.textAlignment = .center
+        return button
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AD50211F-3661-4536-977C-357480FEF377</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Lazy vars:  programmatic UIButton w/ text &amp; states</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Lazy vars:  UIButton w/ text &amp; states</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

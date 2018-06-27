@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - Animation Translation func</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func animateTranslation(with valueOne: CGFloat, with valueTwo: CGFloat, with valueThree: CGFloat, for image: UIImageView) {
+        let toValue = CATransform3DMakeTranslation(valueOne, valueTwo, valueThree)
+        let animation = CABasicAnimation(keyPath: "transform")
+        animation.toValue = toValue
+        animation.duration = 9
+        let image = image
+        image.layer.add(animation, forKey: nil)
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D7CBE3A1-2A12-4A8C-8760-00A06C099ED9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Translation with 3 values for UIImageView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Animation: Translation for UIImageView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

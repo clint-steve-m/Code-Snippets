@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - Constraints: Snapkit - Typical implementation</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private func setup&lt;#outletName#&gt;() {
+        outletName.snp.makeConstraints { (make) in
+            make.top.equalTo(userNameButton.snp.top).offset(5)
+            make.trailing.equalTo(snp.trailing).offset(-20)
+            make.width.height.qualTo(self).multipliedBy(0.3)
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B37D0951-1AA4-4CA6-9D7E-92C6E6B05BF9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Typical implementation of constraints using Snapkit</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Constraints: Snapkit - Typical implementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

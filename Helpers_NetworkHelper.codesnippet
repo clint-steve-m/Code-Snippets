@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - Helpers: NetworkHelper</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>struct &lt;#Name#&gt; {
+    private init() {}
+    static let manager = &lt;#Name#&gt;()
+    
+    private let apiKey = "&lt;#key#&gt;"
+    func &lt;#func name#&gt;(for &lt;#internalParam#&gt;: &lt;#Type#&gt;, completion: @escaping ([&lt;#Type#&gt;]?) -&gt; Void,
+                        errorHandler: @escaping (Error) -&gt; Void) {
+        let endPoint = "&lt;#endPoint#&gt;"
+        guard let url = URL(string: endPoint) else { errorHandler(AppError.badURL(str: endPoint)); return }
+        let request = URLRequest(url: url)
+        let completion: (Data) -&gt; Void = { ( data: Data) in
+            do {
+                let json = try JSONDecoder().decode(&lt;#Type#&gt;.self, from: data)
+                guard let myJson = json.&lt;#property#&gt; else { print("nil"); completion(nil); return }
+                completion(myJson)
+            } catch {
+                errorHandler(AppError.codingError(rawError: error))
+            }
+        }
+        NetworkHelper.manager.performDataTask(with: request, completionHandler: completion, errorHandler: errorHandler)
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DB8EAD78-2268-4ACE-A829-AE68CF228FDD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>NetworkHelper implementation for JSON Data</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Helpers: NetworkHelper</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

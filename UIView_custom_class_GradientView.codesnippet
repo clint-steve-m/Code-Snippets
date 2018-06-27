@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - UIView: custom class GradientView </string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class GradientView: UIView {
+  
+  lazy fileprivate var gradientLayer: CAGradientLayer = {
+    let layer = CAGradientLayer()
+    layer.colors = [UIColor.clear.cgColor, UIColor(white: 0.0, alpha: 0.75).cgColor]
+    layer.locations = [NSNumber(value: 0.0 as Float), NSNumber(value: 1.0 as Float)]
+    return layer
+    }()
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    backgroundColor = UIColor.clear
+    layer.addSublayer(gradientLayer)
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    gradientLayer.frame = bounds
+  }
+  
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D8036821-97D2-4D3F-930E-F549F707256D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>UIView: custom class GradientView </string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIView: custom class GradientView </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

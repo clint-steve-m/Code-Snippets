@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - Helpers: FileManager</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+
+class ClassType: Codable {
+    let title: String
+    let url: String
+}
+
+class FileManagerHelper {
+    private init() {}
+    let filePath = "&lt;#FileName.Plist#&gt;"
+    static let manager = FileManagerHelper()
+    
+    //Saving Images To Disk
+    func saveImage(with urlStr: String, image: UIImage) {
+        let imageData = UIImagePNGRepresentation(image)
+        let imagePathName = urlStr.components(separatedBy: "/").last!
+        let url = dataFilePath(withPathName: imagePathName)
+        do {
+            try imageData?.write(to: url)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    func getImage(with urlStr: String) -&gt; UIImage? {
+        do {
+            let imagePathName = urlStr.components(separatedBy: "/").last!
+            let url = dataFilePath(withPathName: imagePathName)
+            let data = try Data(contentsOf: url)
+            return UIImage(data: data)
+        }
+        catch {
+            print(error.localizedDescription)
+            return nil
+        }
+    }
+    
+    
+    private var nameThisArray = [ClassType]() {
+        didSet {
+            print(nameThisArray)
+            removeDupes()
+            saveImages()
+        }
+    }
+    
+    func removeDupes() {
+        var fileURLSet = Set&lt;String&gt;()
+        var noDupeArr = [ClassType]()
+        for file in nameThisArray {
+            let (inserted, _) = fileURLSet.insert(file.url)
+            if inserted {
+                noDupeArr.append(file)
+            }
+        }
+        if nameThisArray.count != noDupeArr.count { nameThisArray = noDupeArr }
+    }
+    
+    func addNew(file: ClassType) {
+        nameThisArray.append(file)
+    }
+    func getAll() -&gt; [ClassType] {
+        return nameThisArray
+    }
+    
+    private func saveImages() {
+        let propertyListEncoder = PropertyListEncoder()
+        do {
+            let encodedData = try propertyListEncoder.encode(nameThisArray)
+            let phoneURL = dataFilePath(withPathName: filePath)
+            try encodedData.write(to: phoneURL, options: .atomic)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func loadImages() {
+        let propertyListDecoder = PropertyListDecoder()
+        do {
+            let phoneURL = dataFilePath(withPathName: filePath)
+            let encodedData = try Data(contentsOf: phoneURL)
+            let results = try propertyListDecoder.decode([ClassType].self, from: encodedData)
+            nameThisArray = results
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    //USE THIS ONE
+    private func dataFilePath(withPathName path: String) -&gt; URL {
+        return FileManagerHelper.manager.documentsDirectory().appendingPathComponent(path)
+    }
+    
+    //THIS IS ONLY FOR THE ABOVE METHOD
+    private func documentsDirectory() -&gt; URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5B6F3FCE-9307-4836-B45E-A69CC8A81662</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>FileManger implementation</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Helpers: File Manager</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

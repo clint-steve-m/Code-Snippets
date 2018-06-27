@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>Snippet - UIButton: state changes with images</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@IBAction func buttonPressed() {
+        if buttonActive {
+            favoriteButton.setImage(UIImage(named: "favoriteUnfilled"), for: .normal)
+            let message = DataModel.manager.removeFavoriteBook(by: (bookExpandedDetails?.volumeInfo.industryIdentifiers[0].identifier)!)
+            alertController(title: "Alert!", message: message)
+        } else {
+            favoriteButton.setImage(UIImage(named: "favoriteFilled"), for: .normal)
+            let message = DataModel.manager.setFavorite(book: bookExpandedDetails, image: bookImageView.image!)
+            alertController(title: "Alert!", message: message)
+        }
+        buttonActive = !buttonActive
+    }
+    </string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>534F2613-7DA0-4B28-831B-1566A9D7BA82</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>example of UIButton state changes with images</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIButton: state changes with images</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
