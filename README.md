@@ -3,7 +3,7 @@
 Some convenient code snippets I've created while desiging apps. Code snippets are a great way to become more productive with Xcode. 
 If you find yourself writing the same, or similar, piece of code over and over, then it's a good candidate for a user-defined code snippet.   
 
-### All snippets work with **Swift 4** 
+### All listed snippets work with **Swift 4** 
 
 ## Snippets
 ```
