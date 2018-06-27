@@ -5,6 +5,66 @@ If you find yourself writing the same, or similar, piece of code over and over, 
 
 ### All snippets work with **Swift 4** 
 
+## Snippets
+```
+@IBInspectable RoundButton                            Adds borderWidth, cornerRadius & borderColor
+Animation_Translation_for_UIImageVIew                 FromValue & toValue with duration sample code
+Animation_fromValue_toValue_with_duration             Translation with 3 values for UIImageView
+AppDelegate_Firebase_Auth                             Firebase implemention
+Appdelegate_programmatic_VC_Setup                     Sample code for non-Storyboard Viewcontroller implementation
+Constraints_Snapkit_Typical_implementation            Typical implementation of constraints using Snapkit
+Constraints_UIImage_programmatic_example              UIImage programmatic constraints example
+Date_extension                                        Calculate seconds, minutes, hours, days and weeks
+Delegation_implementation                             Delegation with conformity sample code
+DidSet_reloadData_with_DispatchQueue                  ReloadData() w/ DispatchQueue for Array
+Double_extension_Clean_percentage_value               Provides a percentage, minus .tenth place
+Double_extension_round_to_fraction_digits             Extenstion for rounding to specified fraction digits
+Error_enums_for_networkHelper                         Error enums for NetworkHelper 
+FireBase_Auth_Service_implementation                  FireBase Auth Service implementation
+Helpers_FileManager                                   FileManger implementation
+Helpers_NSCacheHelper_for_UIImages                    NSCacheHelper for UIImages
+Helpers_NetWorkHelper_w_data_print_out                NetWorkHelper w/ data print out to console
+Helpers_NetworkHelper                                 NetworkHelper implementation for JSON Data
+Helpers_UserDefaultsHelper_get_and_set                UserDefaultsHelper w/ get and set
+Helpers_imageAPIClient                                ImageAPIClient singleton
+Helpers_imageAPIClient_with_FileManagerHelper         ImageAPIClient with FileManagerHelper for storing Images
+JSON_CodingKeys_example                               CodingKeys example. Rename incoming Data objects
+JSON_mockData_example_GoT                             JSON parsing example with mockData
+JSON_parsed_in_Playground                             JSON: parsed in Playground (example)
+JSON_struct_codable_example                           JSON struct codable example
+KeyboardHandling_Move_UIView                          Move UIView when keyBoardWillShow
+Lazy_vars_UIButton_implementation                     UIButton implementation w/ target sample code
+Lazy_vars_UIButton_programmatic                       UIButton programmatic implementation 
+Lazy_vars_UIButton_with_states                        UIButton w/ text & states
+Lazy_vars_UICollectionView_Vertical                   Programmatic implementation of a vertical collectionView
+Lazy_vars_UIImage                                     Programmatic UIImage implementation
+Lazy_vars_UILabel                                     Programmatic implementation of UILabel
+Lazy_vars_UITableView                                 Programmatic implementation of a lazy var UITableView
+Lazy_vars_UITextField                                 Programmatic implementation of a lazy var UITextfield
+MARK_Section_Comment                                  Section comment for organization and separation
+NavBar_configureNavBar                                BoilerPlate for configuring Navbar programmatically
+Storyboard_storyboardInstance_to_ViewController       StoryboardInstance() => UIViewController
+String_extension_indexOf_and_lastIndexOf              indexOf() character & lastIndexOf() in a String
+String_extension_index_of_character_in_string         returns Int index of a given character in a String
+TabBarController_Programmatic_NavigationVC            Programmatic TabBarController implementation
+UIAlertController_actionSheet_example                 UIAlertController actionSheet example
+UIAlertController_default_and_alertAction             ShowAlert with title & message. AlertAction == Ok
+UIButton_custom_class_roundButton                     Implementation of a Round UIButton w/ convenience init
+UIButton_state_changes_with_images                    Example of UIButton state changes with images
+UICollectionView_DelegateFlowLayout_boilerPlate       CollectionView DelegateFlowLayout done programmatically
+UIPickerView_programmatic_setup                       Programmatic setup of a UIPickerView
+UIStackView_Pinning_extension                         Pinning extension
+UITextField_extension_selective_Padding               Selective Padding Extension
+UIViewController_commonInit_setupViews                CommonInit & setupViews for programmatic implementation           
+UIView_Blur                                           UIView Extension for blurring & unBlurring
+UIView_custom_class_GradientView                      Custom class GradientView
+UIView_extension_Selectively_add_border               Add a border, color and borderwidth
+UIView_extension_makeCircles_for_snapKit              UIView extension for making circles using SnapKit
+UIView_extension_round_selected_corners               Selectively round Corners via UIView extension
+UIView_extenstion_MakeCircles                         Extenstion for Make Corner, make circle, drawCircleInView
+UIView_programmatic_implementation                    Sample code for programmatic UIView implementation
+```
+
 ## How to create your own snippets
 
 * Write your code snippet down at the code editor and select it.
